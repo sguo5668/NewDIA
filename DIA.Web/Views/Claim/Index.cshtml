@@ -1,0 +1,31 @@
+@using PagedList.Core.Mvc
+@model DIA.Web.ViewModels.VMClaim
+@{
+    ViewData["Title"] = "Pager Test";
+}
+ 
+@if (Model.PageData != null)
+{
+    <div>Current Page Number: @Model.PageData.PageNumber</div>
+    <div>Page Size: @Model.PageData.PageSize</div>
+    <div>Total Count: @Model.PageData.TotalItemCount</div>
+
+    <form asp-action="Index" method="get">
+        <div class="form-actions no-color">
+            <p>
+                Find by name: <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-default" />
+
+            </p>
+        </div>
+    </form>
+
+
+    <ul>
+        @foreach (var test in Model.PageData)
+        {
+            <li>@test.ClaimIDNumber</li>
+        }
+    </ul>
+    <pager class="pager-container" list="@Model.PageData" options="@PagedListRenderOptions.TwitterBootstrapPager" asp-action="Index" asp-controller="Claim" />
+}
