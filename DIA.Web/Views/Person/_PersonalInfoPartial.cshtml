@@ -1,0 +1,21 @@
+@model DIA.Web.ViewModels.VMPersonProfile
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <div class="checkbox">
+          
+            <label asp-for=@Model.Person.FullName></label>
+            @Model.Person.FullName  
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <div class="checkbox">
+
+            <label asp-for=@Model.Person.ECN></label>
+            @Model.Person.ECN  
+          
+        </div>
+    </div>
+</div>

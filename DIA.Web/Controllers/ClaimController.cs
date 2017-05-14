@@ -12,9 +12,8 @@ namespace DIA.Web.Controllers
 {
     public class ClaimController : Controller
     {
-    
-      
-         private PagedListService _pageService;
+     
+        private PagedListService _pageService;
         private readonly IRepository<Claim> _repoClaim;
 
         public ClaimController(IRepository<Claim>  repoClaim)
@@ -41,12 +40,9 @@ namespace DIA.Web.Controllers
 
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = 2;
-
-
-       
+  
             var x = new VMClaim();
             x.PageData = this._pageService.GetPageData(pageNumber, pageSize);
-
 
             //var claimHistory = _mapper.Map<IEnumerable<VMClaim>>(claim);
            return View(x);

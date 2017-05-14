@@ -1,7 +1,7 @@
 @using PagedList.Core.Mvc
 @model DIA.Web.ViewModels.VMClaim
 @{
-    ViewData["Title"] = "Pager Test";
+    ViewData["Title"] = "Claim Listing";
 }
  
 @if (Model.PageData != null)
@@ -22,9 +22,9 @@
 
 
     <ul>
-        @foreach (var test in Model.PageData)
+        @foreach (var item in Model.PageData)
         {
-            <li>@test.ClaimIDNumber</li>
+            <li>@item.ClaimIDNumber</li>
         }
     </ul>
     <pager class="pager-container" list="@Model.PageData" options="@PagedListRenderOptions.TwitterBootstrapPager" asp-action="Index" asp-controller="Claim" />

@@ -1,9 +1,9 @@
 C:\DIA\DIA.Services\bin\Debug\netcoreapp1.1\DIA.Services.deps.json
 C:\DIA\DIA.Services\bin\Debug\netcoreapp1.1\DIA.Services.dll
 C:\DIA\DIA.Services\bin\Debug\netcoreapp1.1\DIA.Services.pdb
+C:\DIA\DIA.Services\bin\Debug\netcoreapp1.1\DIA.Entities.dll
+C:\DIA\DIA.Services\bin\Debug\netcoreapp1.1\DIA.Entities.pdb
 C:\DIA\DIA.Services\obj\Debug\netcoreapp1.1\DIA.Services.csprojResolveAssemblyReference.cache
 C:\DIA\DIA.Services\obj\Debug\netcoreapp1.1\DIA.Services.AssemblyInfo.cs
 C:\DIA\DIA.Services\obj\Debug\netcoreapp1.1\DIA.Services.dll
 C:\DIA\DIA.Services\obj\Debug\netcoreapp1.1\DIA.Services.pdb
-C:\DIA\DIA.Services\bin\Debug\netcoreapp1.1\DIA.Entities.dll
-C:\DIA\DIA.Services\bin\Debug\netcoreapp1.1\DIA.Entities.pdb
