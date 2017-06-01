@@ -1,0 +1,55 @@
+@using PagedList.Core.Mvc
+@model DIA.Web.ViewModels.VMClaim
+@{
+    ViewData["Title"] = "reference Listing";
+}
+
+@if (Model.ReferencePageData != null)
+{
+
+
+    <form asp-action="Index" method="get">
+        <div class="form-actions no-color">
+            <p>
+                Find by name: <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-default" />
+
+            </p>
+        </div>
+    </form>
+
+
+    <table class="table table-bordered table-striped table-condensed">
+        <thead>
+            <tr>
+ 
+                <th>Key Name</th>
+                <th>Table Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ReferencePageData)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.SystemValue)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TableName)</td>
+              
+                    <td>
+                        <a id="edit" data-toggle="modal" asp-action="Edit" asp-route-id="@item.Id" data-target="#modal-action-author"
+                           class="btn btn-info">
+                            <i class="glyphicon glyphicon-pencil"></i>  Edit
+                        </a>
+              
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div>Current Page Number: @Model.ReferencePageData.PageNumber</div>
+        <div>Page Size: @Model.ReferencePageData.PageSize</div>
+        <div>Total Count: @Model.ReferencePageData.TotalItemCount</div>
+
+
+    <pager class="pager-container" list="@Model.ReferencePageData" options="@PagedListRenderOptions.TwitterBootstrapPager" asp-action="Index" asp-controller="Reference" />
+}

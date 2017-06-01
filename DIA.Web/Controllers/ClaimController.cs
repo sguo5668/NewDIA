@@ -24,6 +24,9 @@ namespace DIA.Web.Controllers
         }
 
         [HttpGet]
+        [Route("[controller]")]
+ 
+        [Route("[controller]/{id?}")]
         public IActionResult Index(string currentFilter, string searchString, int? page)
         {
             if (searchString != null)
@@ -42,7 +45,7 @@ namespace DIA.Web.Controllers
             var pageSize = 2;
   
             var x = new VMClaim();
-            x.PageData = this._pageService.GetPageData(pageNumber, pageSize);
+            x.ClaimPageData = this._pageService.GetPageData(pageNumber, pageSize);
 
             //var claimHistory = _mapper.Map<IEnumerable<VMClaim>>(claim);
            return View(x);

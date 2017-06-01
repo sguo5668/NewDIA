@@ -9,6 +9,9 @@ namespace DIA.Web.ViewModels
 {
     public class VMClaim
     {
-        public IPagedList<Claim> PageData { get; set; }
+        public IPagedList<Claim> ClaimPageData { get; set; }
+        public IPagedList<ReferenceTableValue> ReferencePageData { get; set; }
     }
+
+
 }

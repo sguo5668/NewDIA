@@ -4,11 +4,11 @@
     ViewData["Title"] = "Claim Listing";
 }
  
-@if (Model.PageData != null)
+@if (Model.ClaimPageData != null)
 {
-    <div>Current Page Number: @Model.PageData.PageNumber</div>
-    <div>Page Size: @Model.PageData.PageSize</div>
-    <div>Total Count: @Model.PageData.TotalItemCount</div>
+    <div>Current Page Number: @Model.ClaimPageData.PageNumber</div>
+    <div>Page Size: @Model.ClaimPageData.PageSize</div>
+    <div>Total Count: @Model.ClaimPageData.TotalItemCount</div>
 
     <form asp-action="Index" method="get">
         <div class="form-actions no-color">
@@ -22,10 +22,10 @@
 
 
     <ul>
-        @foreach (var item in Model.PageData)
+        @foreach (var item in Model.ClaimPageData)
         {
             <li>@item.ClaimIDNumber</li>
         }
     </ul>
-    <pager class="pager-container" list="@Model.PageData" options="@PagedListRenderOptions.TwitterBootstrapPager" asp-action="Index" asp-controller="Claim" />
+    <pager class="pager-container" list="@Model.ClaimPageData" options="@PagedListRenderOptions.TwitterBootstrapPager" asp-action="Index" asp-controller="Claim" />
 }

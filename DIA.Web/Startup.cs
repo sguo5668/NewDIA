@@ -245,6 +245,140 @@ namespace DIA.Web
             context.SaveChanges();
 
 
+
+
+
+
+            var locale1 = new LocalizationRecord
+            {
+
+                
+                Key = "abouttitle",
+                ResourceKey = "PersonController",
+                Text = "this is a test",
+                LocalizationCulture = "en-US"
+            };
+
+
+
+            context.LocalizationRecords.Add(locale1);
+            context.SaveChanges();
+
+
+
+            var reftable = new ReferenceTable
+            {
+
+                TableName = "Claim_Type"
+            };
+
+            context.ReferenceTables.Add(reftable);
+
+            context.SaveChanges();
+
+            //int refid = reftable.Id;
+
+
+            var reftablevalue = new ReferenceTableValue
+            {
+
+                TableName = "Claim_Type",
+                Key = "Disability Claim"
+
+            };
+
+            context.ReferenceTableValues.Add(reftablevalue);
+
+            var reftablevalue2 = new ReferenceTableValue
+            {
+
+                TableName = "Claim_Type",
+                Key = "PFL Claim"
+
+            };
+
+            var reftablevalue3 = new ReferenceTableValue
+            {
+
+                TableName = "Job_Category",
+                Key = "light",
+              
+                Text = "lightxxxxxxxxxxxxxxxxxx" 
+              
+
+            };
+
+            var reftablevalue4 = new ReferenceTableValue
+            {
+
+                TableName = "Job_Category",
+                Key = "medium",
+                Text = "medium cccccccccccccccccccccccccccccc" 
+           
+
+            };
+
+
+            var reftablevalue5 = new ReferenceTableValue
+            {
+
+                TableName = "Job_Category",
+                Key = "heavy"
+
+            };
+
+
+            var reftablevalue6 = new ReferenceTableValue
+            {
+
+                TableName = "State_Code",
+                Key = "CA",
+                Id = 361
+
+            };
+
+            var reftablevalue7 = new ReferenceTableValue
+            {
+
+                TableName = "State_Code",
+                Key = "NY",
+                Id = 362
+            };
+
+
+            var reftablevalue8 = new ReferenceTableValue
+            {
+
+                TableName = "State_Code",
+                Key = "Name",
+                Text= "Name in Italien",
+                ResourceKey = "PersonController",
+                LocalizationCulture ="en-US"
+            };
+
+
+            ReferenceTableValue reftablevalue9 = new ReferenceTableValue()
+            {
+                TableName = "State_Code",
+                Key = "Name",
+                Text = "Name in english",
+                ResourceKey = "PersonController",
+                LocalizationCulture = "es-MX"
+
+            };
+
+            context.ReferenceTableValues.Add(reftablevalue2);
+            context.ReferenceTableValues.Add(reftablevalue3);
+            context.ReferenceTableValues.Add(reftablevalue4);
+            context.ReferenceTableValues.Add(reftablevalue5);
+            context.ReferenceTableValues.Add(reftablevalue6);
+            context.ReferenceTableValues.Add(reftablevalue7);
+            context.ReferenceTableValues.Add(reftablevalue8);
+            context.ReferenceTableValues.Add(reftablevalue9);
+            context.SaveChanges();
+
+
+
         }
     }
 }

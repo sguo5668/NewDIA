@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Localization.SqlLocalizer" Version="1.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Localization" Version="1.1.2" />
     <PackageReference Include="PagedList.Core" Version="1.17.4" />

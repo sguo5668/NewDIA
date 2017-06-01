@@ -4,3 +4,4 @@ C:\DIA\DIA.Entities\bin\Debug\netcoreapp1.1\DIA.Entities.pdb
 C:\DIA\DIA.Entities\obj\Debug\netcoreapp1.1\DIA.Entities.AssemblyInfo.cs
 C:\DIA\DIA.Entities\obj\Debug\netcoreapp1.1\DIA.Entities.dll
 C:\DIA\DIA.Entities\obj\Debug\netcoreapp1.1\DIA.Entities.pdb
+C:\DIA\DIA.Entities\obj\Debug\netcoreapp1.1\DIA.Entities.csprojResolveAssemblyReference.cache
